@@ -8,7 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class Continent extends Model
 {
     protected $table = "continents";
-    protected $primarykey = "continent_id";
+    protected $primaryKey = "continent_id";
     public $timestamps = false;
     use HasFactory;
+    public function regiones() {
+        return $this->hasMany(Region::class,"continent_id");
+    }
 }

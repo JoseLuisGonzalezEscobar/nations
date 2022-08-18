@@ -7,5 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Languages extends Model
 {
+    protected $table = "languages";
+    protected $primaryKey = "language_id";
+    public $timestamps = false;
     use HasFactory; 
 }
